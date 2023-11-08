@@ -1,13 +1,119 @@
 body {
-  margin: 0;
+  margin: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
+h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+img{
+  width: 100%;
+}
+.imagen{
+  width: 160px;
+  margin: 20px auto;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.pregunta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.palabra{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.palo{
+  margin: 2px;
+  border-bottom: 1px solid black;
+  width: 32px;
+  height: 45px;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.botones button{
+  margin: 5px;
+  padding: 5px 0;
+  font-size: 1.3em;
+  background-color: white;
+  border: 1px dashed black;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 35px;
+  text-align: center;
+}
+
+.botones-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 10px; 
+  justify-content: center;
+  padding: 0 20px;
+}
+
+
+.boton {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.boton:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+
+@media screen and (min-width:1024px){
+h2{
+  font-size: 25px;
+}
+}
+
+@media screen and (max-width:488px){
+.botones-container{
+  grid-template-columns: repeat(3,1fr);
+}
+
+}
+
+@media screen and (max-width:430px){
+   h2{
+    font-size: 16px;
+   }
+
+   .boton-portada{
+    width: 65% !important;
+   }
+
+   .boton-ganado{
+    width: 60% !important;
+   }
+   .boton-final{width: 54% !important;}
+}
+
+@media screen and (max-width:1024px){
+  .botones-container{
+    margin-bottom: 25px;
+  }
 }
